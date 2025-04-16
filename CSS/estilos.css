@@ -1,0 +1,194 @@
+/* ---------- ESTILOS GENERALES ---------- */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1C1C1C; /* fondo principal oscuro */
+    color: #EDEDED; /* texto claro */
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #D4AF37; /* dorado */
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+/* ---------- HEADER ---------- */
+header {
+  background-color: #2B2F36;
+  color: #EDEDED;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+header:hover {
+  background-color: #3A4148; /* Gris más oscuro */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Mega menú */
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #2B2F36;
+  border: none;
+  z-index: 1000;
+  padding: 15px 0;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido dentro del mega menú (columnas) */
+.mega-menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 15px;
+}
+
+.mega-menu .col-md-6 {
+  padding: 0 15px;
+}
+
+.mega-menu .dropdown-item {
+  color: #EDEDED;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover para los ítems */
+.mega-menu .dropdown-item:hover {
+  background-color: transparent;
+  color: #D4AF37;
+}
+
+/* Asegurar que el mega menú tenga un buen tamaño en pantallas grandes */
+@media (min-width: 1024px) {
+  .mega-menu {
+    width: 350px;
+  }
+}
+
+/* Mostrar el mega menú al hacer hover sobre el dropdown */
+.nav-item.dropdown:hover .mega-menu {
+  display: block;
+}
+.navbar-brand {
+  font-family: 'Facon', sans-serif; /* Cambia a la fuente deseada */
+  font-size: 3rem; /* Aumentar tamaño */
+  font-weight: 600; /* Hacerlo más grueso */
+  color: #D4AF37; /* Color dorado */
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #EDEDED; /* Color al pasar el mouse */
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem; /* Aumenta el tamaño de la fuente */
+  font-weight: 500; /* Peso medio para un texto más fuerte */
+  color: #EDEDED; /* Color blanco/gris claro */
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #D4AF37; /* Color dorado en hover */
+}
+
+.navbar-toggler {
+  background-color: #000000; /* Cambia a un color más oscuro */
+  border: none; /* Eliminar borde por defecto */
+}
+
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  background-color: #D4AF37; /* Color dorado cuando se pasa el mouse */
+}
+
+  
+  /* ---------- BOTONES ---------- */
+  .btn-principal {
+    background-color: #D4AF37;
+    color: #1C1C1C;
+    font-weight: bold;
+    border: none;
+  }
+  .btn-principal:hover {
+    background-color: #b99930;
+    color: #ffffff;
+  }
+  
+  /* ---------- SECCIONES ---------- */
+  .section-oscura {
+    background-color: #1C1C1C;
+    color: #EDEDED;
+    padding: 2rem 1rem;
+  }
+  
+  .section-clara {
+    background-color: #EDEDED;
+    color: #1C1C1C;
+    padding: 2rem 1rem;
+  }
+  
+  /* ---------- TITULARES ---------- */
+  h1, h2, h3, h4, h5 {
+    color: #D4AF37;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  /* ---------- FOOTER ---------- */
+  footer {
+    background-color: #2B2F36;
+    color: #EDEDED;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .navbar-nav .nav-link {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #EDEDED;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #D4AF37;
+  }
+  
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #D4AF37; /* Color amarillo */
+    border-radius: 50%;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover::after {
+    opacity: 1;
+  }
+  
+  @font-face {
+    font-family: 'Facon';
+    src: url(facon.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
