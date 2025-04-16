@@ -86,4 +86,85 @@ $('#contact-form').on('submit', function(event) {
   }
 });
 
+$(document).ready(function () {
+    $('.filter-checkbox').on('change', function () {
+      let checkedValues = $('.filter-checkbox:checked').map(function () {
+        return this.value;
+      }).get();
+  
+      $('.clase-item').each(function () {
+        const item = $(this);
+        const matches = checkedValues.some(val => item.hasClass(val));
+        item.toggle(matches);
+      });
+    });
+  });
+  
+  $(document).ready(function() {
+    // Filtrar las clases según la categoría seleccionada
+    $(".filter-btn").click(function() {
+      var filterValue = $(this).attr("data-filter");
+  
+      if (filterValue == "all") {
+        $(".clase-item").show();  // Muestra todas las clases
+      } else {
+        $(".clase-item").each(function() {
+          if ($(this).hasClass(filterValue)) {
+            $(this).show();  // Muestra las clases que coinciden
+          } else {
+            $(this).hide();  // Oculta las clases que no coinciden
+          }
+        });
+      }
+    });
+  });
+  
+  $(document).ready(function() {
+    // Inicializar Masonry
+    var $grid = $('.gallery-grid').masonry({
+      itemSelector: '.clase-item',
+      columnWidth: '.clase-item',
+      percentPosition: true
+    });
+  
+    // Filtro de clases
+    $('.filter-btn').on('click', function() {
+      var filterValue = $(this).attr('data-filter');
+      
+      // Filtrado de elementos según la categoría
+      if (filterValue === 'all') {
+        $grid.masonry('layout');
+        $('.clase-item').show();
+      } else {
+        $('.clase-item').each(function() {
+          if ($(this).hasClass(filterValue)) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+        $grid.masonry('layout');
+      }
+    });
+  });
+  $('.zoom-card').hover(
+    function () {
+      $(this).find('.overlay').fadeIn(300);
+    },
+    function () {
+      $(this).find('.overlay').fadeOut(300);
+    }
+  );
+  
+  $(document).ready(function(){
+    $(".zoom-card").hover(
+      function() {
+        $(this).find(".overlay").fadeIn(300);
+      }, 
+      function() {
+        $(this).find(".overlay").fadeOut(300);
+      }
+    );
+  });
+  
 });

@@ -1,0 +1,73 @@
+.clase-item {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.clase-item.hidden {
+  opacity: 0;
+}
+
+  .card-img-top {
+    height: 250px; /* Ajustá según prefieras */
+    object-fit: cover; /* Corta y centra la imagen para que no se deforme */
+  }
+
+  .clases-titulo {
+    margin-top: 100px; /* Ajusta este valor según lo necesites */
+  }
+
+  /* Estilo para los botones de filtro */
+.filter-container .filter-btn {
+  background-color: #2B2F36; /* Color de fondo oscuro */
+  color: #EDEDED; /* Texto en color claro */
+  border: 1px solid #D4AF37; /* Borde dorado */
+  padding: 10px 20px; /* Espaciado adecuado */
+  margin-right: 10px; /* Espacio entre los botones */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+/* Estilo al hacer hover en los botones */
+.filter-container .filter-btn:hover {
+  background-color: #D4AF37; /* Fondo dorado al hacer hover */
+  color: #2B2F36; /* Texto oscuro al hacer hover */
+  transform: translateY(-2px); /* Ligero efecto de elevación */
+}
+
+/* Estilo al hacer click en el botón activo */
+.filter-container .filter-btn.active {
+  background-color: #D4AF37; /* Fondo dorado al ser seleccionado */
+  color: #2B2F36; /* Texto oscuro al ser seleccionado */
+}
+
+.zoom-card {
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.zoom-card:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.zoom-card:hover .overlay {
+  opacity: 1;
+}
