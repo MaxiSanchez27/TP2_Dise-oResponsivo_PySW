@@ -188,7 +188,7 @@ header:hover {
   
   @font-face {
     font-family: 'Facon';
-    src: url(facon.woff) format('woff');
+    src: url(../Facon.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
