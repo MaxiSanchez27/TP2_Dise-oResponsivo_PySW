@@ -147,14 +147,6 @@ $(document).ready(function () {
       }
     });
   });
-  $('.zoom-card').hover(
-    function () {
-      $(this).find('.overlay').fadeIn(300);
-    },
-    function () {
-      $(this).find('.overlay').fadeOut(300);
-    }
-  );
   
   $(document).ready(function(){
     $(".zoom-card").hover(
@@ -167,6 +159,5 @@ $(document).ready(function () {
     );
   });
   
-  console.log("¡scripts.js está funcionando!");
 
 });
