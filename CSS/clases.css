@@ -12,10 +12,6 @@
     object-fit: cover; /* Corta y centra la imagen para que no se deforme */
   }
 
-  .clases-titulo {
-    margin-top: 100px; /* Ajusta este valor según lo necesites */
-  }
-
   /* Estilo para los botones de filtro */
 .filter-container .filter-btn {
   background-color: #2B2F36; /* Color de fondo oscuro */
