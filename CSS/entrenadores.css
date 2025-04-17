@@ -1,3 +1,19 @@
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem; /* Ajusta el margen inferior según sea necesario */
+}
+
+h2.text-center.mb-4 {
+    font-size: 2rem; /* Tamaño de fuente */
+    
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    margin-top: 1rem; /* Margen superior */
+}
 .card-flip-container {
     perspective: 1000px;
     height: 400px; /* Altura total de la tarjeta */
